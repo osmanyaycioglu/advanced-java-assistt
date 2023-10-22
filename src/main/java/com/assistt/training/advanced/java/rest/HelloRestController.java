@@ -2,8 +2,10 @@ package com.assistt.training.advanced.java.rest;
 
 import com.assistt.training.advanced.java.collections.Person;
 import io.swagger.v3.oas.annotations.Operation;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 //@Controller
@@ -44,5 +46,12 @@ public class HelloRestController {
     public String hello5(@Valid @RequestBody Person personParam) {
         return "Hello 5 " + personParam;
     }
+
+    // Bunu yapma
+    public ResponseEntity<?> hello6(HttpServletRequest personParam) {
+        personParam.getRequestURL();
+        return null;
+    }
+
 
 }

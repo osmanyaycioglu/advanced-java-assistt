@@ -5,6 +5,8 @@ import lombok.Data;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
+import java.util.List;
+import java.util.Set;
 
 @Data
 public class CustomerRest {
@@ -23,6 +25,10 @@ public class CustomerRest {
     private String username;
 
     private String password;
+
+    private AddressRest address;
+
+    private Set<PhoneRest> phones;
 
 
 }
